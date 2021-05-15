@@ -1,12 +1,13 @@
 import React from 'react'
 import Topbar from '../../components/topbar/Topbar'
+import './Election.css';
 
 export default function CreateElection() {
     return (
         <>
         <Topbar/>
-        <h1>Create An Election</h1>
-
+        <h1 className="bh1">Create An Election</h1>
+        <hr className="h2"/>
         <div className="loginRight">
           <form className="loginBox" >
             <input
@@ -31,7 +32,7 @@ export default function CreateElection() {
               className="loginInput"
               type="text"
             />
-            <button> ADD</button>
+            <button className="add"> ADD</button>
           </div>
           
            
