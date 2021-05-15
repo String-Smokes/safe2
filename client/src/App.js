@@ -10,6 +10,9 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import Election from "./pages/election/Election";
+import Activity from "./pages/activity/Activity";
+import CreateElection from "./pages/election/CreateElection";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -23,6 +26,28 @@ function App() {
         <Route path="/register">
           {user ? <Redirect to="/" /> : <Register />}
         </Route>
+
+       
+
+        <Route path="/activity">
+          {user ? <Activity/> : <Register />}
+        </Route>
+
+
+        <Route path="/feeds">
+          {user ?  <Home/> : <Login/>  }
+        </Route>
+
+        <Route exact path="/election">
+          {user ?  <Election/> : <Login/>  }
+        </Route>
+
+        <Route  path="/election/create">
+          {user ?  <CreateElection/> : <Login/>  }
+        </Route>
+
+
+
         <Route path="/profile/:username">
           <Profile />
         </Route>

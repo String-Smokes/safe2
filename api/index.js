@@ -11,10 +11,11 @@ const postRoute = require("./routes/posts");
 const router = express.Router();
 const path = require("path");
 
+const mongoURI = 'mongodb+srv://stringsmokes:whitenoise@cluster0.pfqdf.mongodb.net/safe?retryWrites=true&w=majority'
 dotenv.config();
 
 mongoose.connect(
-  process.env.MONGO_URL,
+ mongoURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to MongoDB");
