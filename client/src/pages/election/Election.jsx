@@ -1,20 +1,58 @@
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Topbar from '../../components/topbar/Topbar'
 import ElectionPost from './ElectionPost'
-import Sidebar from '../../components/sidebar/Sidebar'
+// import Sidebar from '../../components/sidebar/Sidebar'
+
+import axios from 'axios'
+
 
 export default function Election() {
+  const [posts, setPosts] = useState({})
+  useEffect(() => {
+    const fetchElection = () => {
+      axios.get('/election')
+           .then(res => {
+            setPosts(res.data)
+           })
+    }
+    fetchElection()
+  },[])
+
+
+  const render =  () => {
+    if(posts.post){
+      return  posts.posts.map(post => {
+        return (
+          <ElectionPost title={post.title} description ={post.desc} candidates={post.candidates} />
+        )
+      }) 
+    }else{
+     return <h1>{posts.text}</h1>
+    }
+  }
+
+
+
     return (
         <>
         <Topbar/>
         {/* <Sidebar/> */}
+
         <Link to="/election/create">
         <button>Create an Election </button>
         </Link>
           <h1> On Going Election</h1>
           
-          <ElectionPost title="title" description ="description" />
+           {/* {posts.posts.map(post => {
+            return (
+              <ElectionPost title={post.title} description ={post.desc} candidates={post.candidates} />
+            )
+          })} :  */}
+
+          {render()}
+        
+          
 
         </>
     )

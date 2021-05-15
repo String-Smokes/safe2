@@ -11,7 +11,7 @@ export const LoginFailure = () => ({
   type: "LOGIN_FAILURE",
 });
 
-export const Follow = (userId) => ({
+export const Follow = (userId) => ({  
   type: "FOLLOW",
   payload: userId,
 });
@@ -20,3 +20,10 @@ export const Unfollow = (userId) => ({
   type: "UNFOLLOW",
   payload: userId,
 });
+
+export const Logout = (posts) => ({
+  type : 'Election_Post',
+  payload : posts
+})
+
+

@@ -5,6 +5,11 @@ export default function ElectionPost(props) {
         <div>
             <p>{props.title}</p>
             <p>{props.description}</p>
+            {props.candidates.map(candidate => {
+                return (
+                    <p>{candidate}</p>
+                )
+            })}
              <button>result</button>
              <button>vote</button>
         </div>
