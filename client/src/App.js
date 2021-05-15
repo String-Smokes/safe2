@@ -13,6 +13,7 @@ import { AuthContext } from "./context/AuthContext";
 import Election from "./pages/election/Election";
 import Activity from "./pages/activity/Activity";
 import CreateElection from "./pages/election/CreateElection";
+import CreateActivity from "./pages/activity/CreateActivity";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -29,7 +30,7 @@ function App() {
 
        
 
-        <Route path="/activity">
+        <Route exact path="/activity">
           {user ? <Activity/> : <Register />}
         </Route>
 
@@ -46,6 +47,9 @@ function App() {
           {user ?  <CreateElection/> : <Login/>  }
         </Route>
 
+        <Route  path="/activity/create">
+          {user ?  <CreateActivity/> : <Login/>  }
+        </Route>
 
 
         <Route path="/profile/:username">

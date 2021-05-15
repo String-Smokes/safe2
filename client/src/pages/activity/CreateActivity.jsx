@@ -1,11 +1,11 @@
 import React from 'react'
 import Topbar from '../../components/topbar/Topbar'
 
-export default function CreateElection() {
+export default function CreateActivity() {
     return (
         <>
         <Topbar/>
-        <h1>Create An Election</h1>
+        <h1>Create An Activity</h1>
 
         <div className="loginRight">
           <form className="loginBox" >
