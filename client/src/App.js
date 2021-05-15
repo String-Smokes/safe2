@@ -21,7 +21,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {user ? <Home /> : <Register />}
+          {/* {user ? <Home /> : <Register />} */}
+          <Home /> 
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
@@ -31,24 +32,29 @@ function App() {
        
 
         <Route exact path="/activity">
-          {user ? <Activity/> : <Register />}
+          {/* {user ? <Activity/> : <Register />} */}
+          <Activity/>
         </Route>
 
 
         <Route path="/feeds">
-          {user ?  <Home/> : <Login/>  }
+          {/* {user ?  <Home/> : <Login/>  } */}
+          <Home/>
         </Route>
 
         <Route exact path="/election">
-          {user ?  <Election/> : <Login/>  }
+          {/* {user ?  <Election/> : <Login/>  } */}
+          <Election/>
         </Route>
 
         <Route  path="/election/create">
-          {user ?  <CreateElection/> : <Login/>  }
+          {/* {user ?  <CreateElection/> : <Login/>  } */}
+          <CreateElection/>
         </Route>
 
         <Route  path="/activity/create">
-          {user ?  <CreateActivity/> : <Login/>  }
+          {/* {user ?  <CreateActivity/> : <Login/>  } */}
+          <CreateActivity/>
         </Route>
 
 
