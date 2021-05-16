@@ -38,13 +38,13 @@ export default function Product({ post }) {
     }
   };
   return (
-    <div className="post">
-      <div className="postWrapper">
-        <div className="postTop">
-          <div className="postTopLeft">
+    <div className="product">
+      <div className="productWrapper">
+        <div className="productTop">
+          <div className="productTopLeft">
             <Link to={`/profile/${user.username}`}>
               <img
-                className="postProfileImg"
+                className="productProfileImg"
                 src={
                   user.profilePicture
                     ? PF + user.profilePicture
@@ -53,20 +53,20 @@ export default function Product({ post }) {
                 alt=""
               />
             </Link>
-            <span className="postUsername">{user.username}</span>
-            <span className="postDate">{format(post.createdAt)}</span>
+            <span className="productUsername">{user.username}</span>
+            <span className="productDate">{format(post.createdAt)}</span>
           </div>
-          <div className="postTopRight">
+          <div className="productTopRight">
             <MoreVert />
           </div>
         </div>
-        <div className="postCenter">
-          <span className="postText">{post?.desc}</span>
-          <img className="postImg" src={PF + post.img} alt="" />
-          <div className="postText">Price: {post?.price}</div>
+        <div className="productCenter">
+          <span className="productText">{post?.desc}</span>
+          <img className="productImg" src={PF + post.img} alt="" />
+          <div className="productText">Price: {post?.price}</div>
         </div>
-        <div className="postBottom">
-          <div className="postBottomLeft">
+        <div className="productBottom">
+          <div className="productBottomLeft">
             {/* <img
               className="likeIcon"
               src={`${PF}like.png`}
