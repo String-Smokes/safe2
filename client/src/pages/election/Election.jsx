@@ -24,11 +24,11 @@ export default function Election() {
     if(posts.post){
       return  posts.posts.map(post => {
         return (
-          <ElectionPost title={post.title} description ={post.desc} candidates={post.candidates} />
+          <ElectionPost key={post._id} title={post.title} description ={post.desc} id={post._id} candidates={post.candidates} />
         )
       }) 
     }else{
-     return <h1>{posts.text}</h1>
+     return <h1 className="ah1">{posts.text}</h1>
     }
   }
 
@@ -40,9 +40,9 @@ export default function Election() {
         {/* <Sidebar/> */}
 
         <Link to="/election/create">
-        <button>Create an Election </button>
+        <button className="btn">Create an Election </button>
         </Link>
-          <h1> On Going Election</h1>
+          <h1 className="ah1" > On Going Election</h1>
           
            {/* {posts.posts.map(post => {
             return (

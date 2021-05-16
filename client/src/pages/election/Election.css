@@ -1,0 +1,118 @@
+.btn {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #284594;
+    width: 500px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 80px;
+    margin-left: 37%;
+    margin-bottom: 100px;
+    padding: 5px;
+    text-decoration: none;
+    border-style: none;
+    border-color: none;
+}
+
+.ah1 {
+    font-size: 40px;
+    text-align: center;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 10%;
+    /* border-radius: 10px; */
+    box-shadow: 5px 5px;
+}
+
+.card {
+    width: 80%;
+    height: 300px;
+    border: 1px solid black;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    /* background-color: #284594; */
+}
+
+hr {
+    /* color: white; */
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.card-desc {
+    font-size: 30px;
+    color: black;
+    /* border: 0.5px solid black; */
+    border-radius: 10px;
+    height: 60px;
+    padding: 30px;
+    margin-bottom: 100px;
+    /* background-color: #f8b30d; */
+}
+
+.card-btn1 {
+    font-size: 30px;
+    width: 10%;
+    border-radius: 10px;
+    margin-left: 75%;
+    /* margin-left: -20px; */
+    margin-right: 10px;
+    height: 40px;
+    color: white;
+    background-color: #284594;
+    outline: none;
+    border-style: none;
+    border-color: none;
+}
+
+.card-btn2 {
+    font-size: 30px;
+    width: 10%;
+    height: 40px;
+    border-radius: 10px;
+    /* margin-left: 500px; */
+    padding: 0;
+    color: white;
+    background-color: #284594;
+    /* background-color: white; */
+    outline: none;
+    border-style: none;
+    border-color: none;
+}
+
+.bh1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.h2 {
+    width: 50%;
+    margin-left: 500px;
+}
+
+.add {
+    width: 5%;
+    height: 90%;
+    border-style: none;
+    background-color: #284594;
+    color: white;
+    margin-left: 30px;
+}

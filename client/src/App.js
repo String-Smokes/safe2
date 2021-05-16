@@ -14,6 +14,7 @@ import Election from "./pages/election/Election";
 import Activity from "./pages/activity/Activity";
 import CreateElection from "./pages/election/CreateElection";
 import CreateActivity from "./pages/activity/CreateActivity";
+import Vote from "./pages/election/Vote";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -48,7 +49,7 @@ function App() {
         </Route>
 
         <Route  path="/election/create">
-          {/* {user ?  <CreateElection/> : <Login/>  } */}
+          {/* {user ?  <CreateElection/> : <Login/>  } */}  
           <CreateElection/>
         </Route>
 
@@ -57,6 +58,9 @@ function App() {
           <CreateActivity/>
         </Route>
 
+        <Route path="/election/vote/:id">
+          <Vote />
+        </Route>
 
         <Route path="/profile/:username">
           <Profile />
