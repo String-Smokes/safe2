@@ -2,6 +2,8 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
+import Store from "./pages/store/Store";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,6 +30,11 @@ function App() {
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
           {user ? <Redirect to="/" /> : <Register />}
+        </Route>
+
+        <Route exact path="/store">
+          {/* {user ? <Activity/> : <Register />} */}
+          <Store/>
         </Route>
 
        

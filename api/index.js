@@ -8,6 +8,8 @@ const multer = require("multer");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
+const productRoute = require("./routes/products");
+
 const electionRoute = require("./routes/election");
 const router = express.Router();
 const path = require("path");
@@ -18,10 +20,8 @@ dotenv.config();
 mongoose.connect(
  mongoURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
+).then((db) => console.log("Database is connected"))
+.catch((err) => console.log(err));;
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware
@@ -50,7 +50,8 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
-app.use('/api/election',electionRoute)
+app.use('/api/election',electionRoute);
+app.use('/api/store', productRoute);
 
 app.listen(8800, () => {
   console.log("Backend server is running!");
