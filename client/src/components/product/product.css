@@ -1,61 +1,62 @@
-.post {
-  width: 30%;
+.product {
+  width: 46%;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-  margin: 10px 10px;
+  margin: 20px 15px;
+  display: inline-grid;
 }
 
-.postWrapper {
+.productWrapper {
   padding: 10px;
 }
 
-.postTop {
+.productTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.postTopLeft {
+.productTopLeft {
   display: flex;
   align-items: center;
 }
 
-.postProfileImg {
+.productProfileImg {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.postUsername {
+.productUsername {
   font-size: 15px;
   font-weight: 500;
   margin: 0 10px;
 }
 
-.postDate{
+.productDate{
     font-size: 12px;
 }
 
-.postCenter{
+.productCenter{
     margin: 20px 0;
 }
 
-.postImg{
+.productImg{
     margin-top: 20px;
     width: 100%;
     max-height: 500px;
     object-fit: contain;
 }
 
-.postBottom{
+.productBottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.postBottomLeft{
+.productBottomLeft{
     display: flex;
     align-items: center;   
 }
@@ -67,12 +68,21 @@
     cursor: pointer;
 }
 
-.postLikeCounter{
+.productLikeCounter{
     font-size: 15px;
 }
 
-.postCommentText{
+.productCommentText{
     cursor: pointer;
     border-bottom: 1px dashed gray;
     font-size: 15px;
+}
+
+.bidProduct{
+  padding: 5px 30px;
+  font-size: large;
+  outline: none;
+  border: none;
+  background-color: #f8b30d;
+  border-radius: 5%;
 }
