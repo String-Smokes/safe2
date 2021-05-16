@@ -23,12 +23,21 @@ export default function Vote() {
     }, []);
 
 
-      const election = () => {
-         return  electionData.candidates.map(data => {
-             return (
-             <p>{data}</p>
+      const election = () =>{
+          if(electionData.candidates){
+            return  electionData.candidates.map(data => {
+               return(
+                   <div>
+                    
+                       <h2>{data}</h2>
+                       <button>Vote</button>
+                   </div>
                )
-              })
+                 })
+          }else{
+              return null;
+          }
+       
          }
       
 
@@ -43,9 +52,7 @@ export default function Vote() {
     return (
         <div>
             <h1>Vote</h1>
-             {/* {electionData.candidates.map(data => {
-                return <p>{data}</p>
-            })} */}
+             <h1>{electionData.title}</h1>
             {election()}
         </div>
     )
