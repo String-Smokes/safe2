@@ -2,16 +2,18 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
 import Topbar from '../../components/topbar/Topbar'
+import './Election.css';
 
 export default function CreateElection() {
   const[electionPost, setElectionPost] = useState({
     title : '',
     desc: '',
     candidates : [],
+    name : ''
   })
   const history = useHistory()
 
-  const [name, setName] = useState('')
+  // const [name, setName] = useState('')
 
   
   const onChange = (e)=>{
@@ -21,21 +23,23 @@ export default function CreateElection() {
     }));
 } 
 
-const onChangeCandidate = (e) => {
-  console.log('1',name)
-    setName(e.target.value)
-    console.log('2',name)
+// const onChangeCandidate = (e) => {
+//   console.log('1',name)
+//     // setName(e.target.value)
+//     console.log('2',name)
     
-}
+// }
 
   const Add = (e) => {
-    console.log('name',name)
+    // console.log('name',name)
+    console.log(electionPost.candidates)
        e.preventDefault()
-    setElectionPost(prevState => ({
-      ...prevState, candidates : [...prevState.candidates,name]
-
-    }))
-    setName('')
+    setElectionPost(prevState => {
+      // setName('')
+      return({
+        ...prevState, candidates : [...prevState.candidates,prevState.name]
+      })
+    })
     console.log(electionPost)
   } 
 
@@ -46,7 +50,7 @@ const onChangeCandidate = (e) => {
     const data = {
       title : electionPost.title,
       desc: electionPost.desc,
-      candidate: electionPost.candidate,
+      candidate: electionPost.candidates,
 
     }
     console.log('works')
@@ -64,8 +68,8 @@ const onChangeCandidate = (e) => {
     return (
         <>
         <Topbar/>
-        <h1>Create An Election</h1>
-
+        <h1 className="bh1">Create An Election</h1>
+        <hr className="h2" />
         <div className="loginRight">
           <form  onSubmit={onSubmit} className="loginBox" >
             <input
@@ -90,14 +94,14 @@ const onChangeCandidate = (e) => {
           <input
               placeholder="Candidate"
               required
-              id="candidate"
-              value ={name}
-              onChange={onChangeCandidate}
+              id="name"
+              value ={electionPost.name}
+              onChange={onChange}
             //   ref={passwordAgain}
               className="loginInput"
               type="text"
             />
-            <button onClick={Add}> ADD</button>
+            <button className="add" onClick={Add}> ADD</button>
           </div>
           
            

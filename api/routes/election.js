@@ -6,8 +6,9 @@ router.post('/create', async (req,res) => {
     const ElectionPost = new Election({
         title : req.body.title,
         desc : req.body.desc,
-        candidates : req.body.candidates
+        candidates : req.body.candidate
     })
+    console.log(req.body.candidate)
     try {
         const savedPost = await ElectionPost.save();
         console.log(ElectionPost);
@@ -26,6 +27,18 @@ router.get('/', async (req,res) => {
                 }else{
                     return res.status(200).json({post : true, posts : posts})
                 }
+            })
+})
+
+router.get('/vote/:id',(req,res) => {
+    const id = req.params.id;
+    console.log('id',id)
+    Election.findById({_id : id})
+            .then(data => {
+                res.status(200).json(data)
+            })
+            .catch(err => {
+                res.status(200).json(err)
             })
 })
 

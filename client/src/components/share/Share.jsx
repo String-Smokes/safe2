@@ -1,9 +1,9 @@
 import "./share.css";
 import {
   PermMedia,
-  Label,
-  Room,
-  EmojiEmotions,
+  // Label,
+  // Room,
+  // EmojiEmotions,
   Cancel,
 } from "@material-ui/icons";
 import { useContext, useRef, useState } from "react";
