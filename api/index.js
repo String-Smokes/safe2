@@ -9,6 +9,7 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const productRoute = require("./routes/products");
+const activityRoute = require("./routes/activity");
 
 const electionRoute = require("./routes/election");
 const router = express.Router();
@@ -52,6 +53,7 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use('/api/election',electionRoute);
 app.use('/api/store', productRoute);
+app.use('/api/activity',activityRoute)
 
 app.listen(8800, () => {
   console.log("Backend server is running!");
