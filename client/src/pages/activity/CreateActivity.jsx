@@ -1,12 +1,13 @@
 import React from 'react'
 import Topbar from '../../components/topbar/Topbar'
+import './Activity.css';
 
 export default function CreateActivity() {
     return (
         <>
         <Topbar/>
-        <h1>Create An Activity</h1>
-
+        <h1 class="bh2">Create An Activity</h1>
+        <hr className="h3"/>
         <div className="loginRight">
           <form className="loginBox" >
             <input
@@ -31,7 +32,7 @@ export default function CreateActivity() {
               className="loginInput"
               type="text"
             />
-            <button> ADD</button>
+            <button className="add1"> ADD</button>
           </div>
           
            

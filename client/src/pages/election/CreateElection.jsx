@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
 import Topbar from '../../components/topbar/Topbar'
+import './Election.css';
 
 export default function CreateElection() {
   const[electionPost, setElectionPost] = useState({

@@ -1,6 +1,7 @@
 import React from 'react'
 import Topbar from '../../components/topbar/Topbar'
 import ActivityPost from './ActivityPost'
+import './Activity.css';
 import { Link } from 'react-router-dom'
 
 export default function Activity() {
@@ -9,9 +10,9 @@ export default function Activity() {
         <Topbar/>
         {/* <Sidebar/> */}
         <Link to="/activity/create">
-        <button>Create an Activity </button>
+        <button className="btn1">Create an Activity </button>
         </Link>
-          <h1> On Going Activities</h1>
+          <h1 className="ah11"> On Going Activities</h1>
           
           <ActivityPost title="title" description ="description" />
 

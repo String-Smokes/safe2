@@ -42,7 +42,10 @@ export default function Election() {
         <Link to="/election/create">
         <button className="btn">Create an Election </button>
         </Link>
+
           <h1 className="ah1" > On Going Election</h1>
+
+        
           
            {/* {posts.posts.map(post => {
             return (
