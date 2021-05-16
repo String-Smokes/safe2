@@ -24,8 +24,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {/* {user ? <Home /> : <Register />} */}
-          <Home /> 
+          {user ? <Home /> : <Register />}
+          {/* <Home />  */}
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
@@ -33,36 +33,36 @@ function App() {
         </Route>
 
         <Route exact path="/store">
-          {/* {user ? <Activity/> : <Register />} */}
-          <Store/>
+          {user ? <Activity/> : <Register />}
+          {/* <Store/> */}
         </Route>
 
        
 
         <Route exact path="/activity">
-          {/* {user ? <Activity/> : <Register />} */}
-          <Activity/>
+          {user ? <Activity/> : <Register />}
+          {/* <Activity/> */}
         </Route>
 
 
         <Route path="/feeds">
-          {/* {user ?  <Home/> : <Login/>  } */}
-          <Home/>
+          {user ?  <Home/> : <Login/>  }
+          {/* <Home/> */}
         </Route>
 
         <Route exact path="/election">
-          {/* {user ?  <Election/> : <Login/>  } */}
-          <Election/>
+          {user ?  <Election/> : <Login/>  }
+          {/* <Election/> */}
         </Route>
 
         <Route  path="/election/create">
-          {/* {user ?  <CreateElection/> : <Login/>  } */}  
-          <CreateElection/>
+          {user ?  <CreateElection/> : <Login/>  }  
+          {/* <CreateElection/> */}
         </Route>
 
         <Route  path="/activity/create">
-          {/* {user ?  <CreateActivity/> : <Login/>  } */}
-          <CreateActivity/>
+          {user ?  <CreateActivity/> : <Login/>  }
+          {/* <CreateActivity/> */}
         </Route>
 
         <Route path="/election/vote/:id">
