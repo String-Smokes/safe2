@@ -33,7 +33,7 @@ function App() {
         </Route>
 
         <Route exact path="/store">
-          {user ? <Activity/> : <Register />}
+          {user ? <Store/> : <Register />}
           {/* <Store/> */}
         </Route>
 
