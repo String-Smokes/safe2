@@ -32,7 +32,7 @@ export default function Feed({ username }) {
           {(!username || username === user.username) && <ShareProduct />}
         </div>
         <h2 className="titleStore">Your College Store</h2>
-        <div className="product">
+        <div className="productFeed">
           {products.map((p) => (
             <Product key={p._id} post={p} />
           ))}
