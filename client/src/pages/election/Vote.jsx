@@ -7,24 +7,46 @@ export default function Vote() {
 
     const [electionData, setElectionData] = useState({});
     const { id } = useParams()
-  
     useEffect(() => {
         console.log(id)
-      const fetchData = async () => {
-        const res = await axios.get(`/election/vote/${id}`);
-        setElectionData(res.data);
-        console.log(electionData)
-      };
-      fetchData();
+      const fetchData =  () => {
+        axios.get(`/election/vote/${id}`)
+             .then( res => {
+                 console.log('set')
+               setElectionData(res.data);
+               console.log('1')
+                  console.log('election data',electionData)
+                  console.log('election data',electionData.candidates)
+             })      
+      }
+      fetchData()
+    }, []);
 
-    }, [id]);
+
+      const election = () => {
+         return  electionData.candidates.map(data => {
+             return (
+             <p>{data}</p>
+               )
+              })
+         }
+      
+
+    // console.log('election data',electionData)
+    // console.log('election data',electionData.candidates)
+    
+    // let array =  electionData.candidates.map(data => {
+    //        return data
+    //     })
+    //     console.log(array)
 
     return (
         <div>
-            {/* {electionData.candidates.maps(data => {
-                return <p>data</p>
-            })} */}
             <h1>Vote</h1>
+             {/* {electionData.candidates.map(data => {
+                return <p>{data}</p>
+            })} */}
+            {election()}
         </div>
     )
 }
