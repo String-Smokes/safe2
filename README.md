@@ -3,10 +3,10 @@
 
 Students in colleges sometimes can miss non-academic activities while studying . Our projects SAFE involves the non-academic needs of a college students like:
 
-1. Stores for buying old items of seniors
-2, Activities for checking club activities going in college
-3. Feed for checking feed of college
-4. Election for election purpose of college
+1. Stores for buying old items of seniors.
+2, Activities for checking club activities going in college.
+3. Feed for checking feed of college.
+4. Election for election purpose of college.
 
 
 Our main motive is to bring all the co-curricular activities of the together and fulfill the common need of college students.
